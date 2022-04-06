@@ -1,0 +1,23 @@
+{
+  "name": "puppeteer-screenshots",
+  "version": "1.0.0",
+  "description": "Take website screenshots from cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abid-C/puppeteer-screenshots.git"
+  },
+  "keywords": [
+    "puppeteer",
+    "nodejs"
+  ],
+  "author": "Abid-C",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abid-C/puppeteer-screenshots/issues"
+  },
+  "homepage": "https://github.com/Abid-C/puppeteer-screenshots#readme"
+}
