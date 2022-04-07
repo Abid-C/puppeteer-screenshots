@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Abid-C/puppeteer-screenshots/issues"
   },
-  "homepage": "https://github.com/Abid-C/puppeteer-screenshots#readme"
+  "homepage": "https://github.com/Abid-C/puppeteer-screenshots#readme",
+  "dependencies": {
+    "puppeteer": "^13.5.2"
+  }
 }
