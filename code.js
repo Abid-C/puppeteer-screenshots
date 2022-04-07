@@ -12,10 +12,19 @@ const Screenshot = async () => {
 
     await page.screenshot ({
 
-        path: "./screenshot.png",
+        path: "./screenshots/screenshot.png",
 
         fullPage: true
     });
 }
 
-Screenshot ();
+Screenshot ()
+.then( (r)=>{
+    console.log('Screenshot taken.');
+    process.exit(0);
+})
+.catch(err=>{
+    console.log('Something went wrong');
+    console.error(err);
+    process.exit(0);
+});
