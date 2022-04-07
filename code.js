@@ -10,16 +10,18 @@ const Screenshot = async () => {
 
     await page.goto(url);
 
-    await page.screenshot ({
+    await page.waitForSelector('.lnXdpd');
 
-        path: "./screenshots/screenshot.png",
+    const logo = await page.$('.lnXdpd');
 
-        fullPage: true
+    await logo.screenshot ({
+
+        path: "./screenshots/logo.png",  
     });
 }
 
 Screenshot ()
-.then( (r)=>{
+.then( (res)=>{
     console.log('Screenshot taken.');
     process.exit(0);
 })
