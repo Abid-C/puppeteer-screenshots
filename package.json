@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Abid-C/puppeteer-screenshots#readme",
   "dependencies": {
+    "command-line-args": "^5.2.1",
     "puppeteer": "^13.5.2"
   }
 }
