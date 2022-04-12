@@ -1,8 +1,14 @@
+const optionDefinitions = [
+    { name: 'url', alias: 'u', type: String },
+    { name: 'viewport', alias: 'v', type: String, multiple: true, defaultOption: true }
+]
+
+const commandLineArgs = require ('command-line-args')
+const options = commandLineArgs (optionDefinitions)
+
 const puppeteer = require('puppeteer');
 
-const url = "https://www.google.com"
-
-const Screenshot = async () => {
+const Screenshot = async (url) => {
 
     const browser = await puppeteer.launch();
 
@@ -10,17 +16,13 @@ const Screenshot = async () => {
 
     await page.goto(url);
 
-    await page.waitForSelector('.lnXdpd');
+    await page.screenshot ({
 
-    const logo = await page.$('.lnXdpd');
-
-    await logo.screenshot ({
-
-        path: "./screenshots/logo.png",  
+        path: "./screenshots/google.png",  
     });
 }
 
-Screenshot ()
+Screenshot (options.url)
 .then( (res)=>{
     console.log('Screenshot taken.');
     process.exit(0);
