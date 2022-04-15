@@ -16,9 +16,11 @@ const Screenshot = async (url) => {
 
     await page.goto(url);
 
+    const _url = new URL(url)
+
     await page.screenshot ({
 
-        path: "./screenshots/google.png",  
+        path: "./screenshots/" + _url.hostname + ".png",  
     });
 }
 
