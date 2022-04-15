@@ -1,5 +1,5 @@
 const optionDefinitions = [
-    { name: 'url', alias: 'u', type: String },
+    { name: 'url', alias: 'u', type: String, defaultValue: 'https://google.com' },
     { name: 'viewport', alias: 'v', type: String, multiple: true, defaultOption: true }
 ]
 
